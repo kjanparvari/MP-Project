@@ -5,7 +5,7 @@ import com.example.mp_project.R
 val sampleBooks = listOf<Book>(
     Book(
         R.drawable.the_faut_in_our_stars,
-        "The Fault in Our Stars",
+        "اشتباه در ستاره های بخت ما",
         "John Green",
         "Novel",
         4.8,
@@ -15,7 +15,7 @@ val sampleBooks = listOf<Book>(
     ),
     Book(
         R.drawable.harry_potter_and_the_philosopher_s_stone,
-        "harry potter and the philosopher's stone",
+        "هری پاتر و سنگ جادو",
         "J.K. Rowling",
         "Novel",
         4.7,
@@ -38,15 +38,15 @@ val sampleAnnouncements = listOf<Announcement>(
     Announcement(
         sampleBooks.first(),
         sampleUsers.first(),
-        20000,
+        60000,
         "1400-07-15",
         "sample description to sell this book"
     ),
     Announcement(
-        sampleBooks.first(),
+        sampleBooks[1],
         sampleUsers.first(),
-        20000,
-        "1400-07-15",
+        45000,
+        "1400-05-12",
         "sample description to sell this book"
     ),
 )
