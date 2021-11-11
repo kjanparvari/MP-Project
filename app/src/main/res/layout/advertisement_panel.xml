@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/adPicture"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginBottom="5dp" />
+
+    <TextView
+        android:id="@+id/adTitle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="5dp"
+        android:textAlignment="textStart"
+        android:textDirection="rtl" />
+
+    <TextView
+        android:id="@+id/adPrice"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="5dp"
+        android:textAlignment="textStart"
+        android:textDirection="rtl" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        >
+
+        <TextView
+            android:id="@+id/adTime"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
+            android:textAlignment="textStart"
+            android:textDirection="rtl"
+            />
+
+        <TextView
+            android:id="@+id/adCity"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"
+            android:textAlignment="textStart"
+            android:textDirection="rtl"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/adDescription"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginBottom="5dp"
+        android:textAlignment="textStart"
+        android:textDirection="rtl" />
+
+    <Button
+        android:id="@+id/adRelatedAds"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/button_color"
+        android:text="@string/related_ads"
+        android:layout_marginBottom="5dp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textDirection="rtl"
+        app:backgroundTint="@color/button_color" />
+
+    <TextView
+        android:id="@+id/adPhoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textAlignment="textStart"
+        android:textDirection="rtl" />
+
+</LinearLayout>
