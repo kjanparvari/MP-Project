@@ -5,11 +5,11 @@ import androidx.annotation.StringRes
 import java.io.FileDescriptor
 
 class Announcement(
-    book: Book,
-    user: User,
-    price: Int,
-    time: String, // TODO: Change Type
-    description: String,
+    val book: Book,
+    val user: User,
+    val price: Int,
+    val time: String, // TODO: Change Type
+    val description: String,
 
 
 ) {
