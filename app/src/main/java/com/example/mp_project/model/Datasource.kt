@@ -59,4 +59,8 @@ class Datasource {
     fun loadAnnouncements(): List<Announcement> {
         return sampleAnnouncements
     }
+
+    fun loadUsers(): List<User> {
+        return sampleUsers
+    }
 }

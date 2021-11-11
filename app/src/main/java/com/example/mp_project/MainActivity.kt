@@ -11,6 +11,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val myBooks = Datasource().loadBooks()
         val myAnnouncements = Datasource().loadAnnouncements()
+        val myUsers = Datasource().loadUsers()
         val recyclerView = findViewById<RecyclerView>(R.id.announcements_recycler_view)
         recyclerView.adapter = ItemAdapter(this, myAnnouncements)
         recyclerView.setHasFixedSize(true)
