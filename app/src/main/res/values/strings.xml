@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">MP-Project</string>
     <string name="related_ads">آگهی های مرتبط</string>
+    <string name="search_bar_hint">جست و چو در کتاب ها</string>
     <string name="add_comment">ثبت نظر</string>
     <string name="like">پسندیدم</string>
     <string name="dislike">نپسندیدم</string>

@@ -7,20 +7,58 @@
     tools:context=".MainActivity">
 
 
-    <FrameLayout
+    <LinearLayout
         android:id="@+id/frame_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/light_gray"
+        android:orientation="vertical"
         tools:context=".MainActivity"
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="1dp">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/announcements_recycler_view"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scrollbars="vertical"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            />
-    </FrameLayout>
+            android:layout_height="50dp"
+            android:layout_margin="8dp"
+            android:layout_marginBottom="0dp"
+            android:background="@color/white">
+
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="9"
+                android:autofillHints=""
+                android:hint="@string/search_bar_hint"
+                android:inputType="text"
+                android:background="@android:color/transparent"
+                android:textAlignment="textStart"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_weight="1"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="@string/search_bar_hint"
+                android:src="@drawable/search_logo">
+
+            </ImageView>
+
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/announcements_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+        </FrameLayout>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

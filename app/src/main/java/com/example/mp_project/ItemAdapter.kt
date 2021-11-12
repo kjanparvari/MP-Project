@@ -13,7 +13,9 @@ class ItemAdapter(private val context: Context, private val dataset: List<Announ
 
     RecyclerView.Adapter<ItemAdapter.ItemViewHolder>() {
     class ItemViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
-        val textView: TextView = view.findViewById(R.id.announcement_item_title)
+        val titleTextView: TextView = view.findViewById(R.id.announcement_item_title)
+        val priceTextView: TextView = view.findViewById(R.id.announcement_item_price)
+        val timeTextView: TextView = view.findViewById(R.id.announcement_item_time)
         val imageView: ImageView = view.findViewById(R.id.announcement_item_image)
     }
 
@@ -25,7 +27,9 @@ class ItemAdapter(private val context: Context, private val dataset: List<Announ
 
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         val item: Announcement = dataset[position]
-        holder.textView.text = item.book.title
+        holder.titleTextView.text = item.book.title
+        holder.priceTextView.text = "قیمت : ${item.price}"
+        holder.timeTextView.text = "تاریخ : ${item.time}"
         holder.imageView.setImageResource(item.book.imageId)
 //        val intent = Intent(context, DetailActivity::class.java)
 //        intent.putExtra("name", item.nameResourceId)

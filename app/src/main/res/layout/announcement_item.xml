@@ -3,7 +3,7 @@
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="150dp"
-    android:layout_margin="8dp">
+    android:layout_margin="4dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,15 +14,37 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="20"
+            android:orientation="vertical"
             android:padding="10dp">
 
             <TextView
                 android:id="@+id/announcement_item_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textAlignment="textStart"
-                android:textAppearance="?attr/textAppearanceHeadline6"
                 android:maxLines="1"
+                android:textAlignment="textStart"
+                android:layout_marginTop="13dp"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/announcement_item_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:textAlignment="textStart"
+                android:layout_marginTop="15dp"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/announcement_item_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:textAlignment="textStart"
+                android:layout_marginTop="15dp"
+                android:textAppearance="?attr/textAppearanceHeadline6"
                 android:textSize="16sp" />
         </LinearLayout>
 
@@ -30,8 +52,11 @@
             android:id="@+id/announcement_item_image"
             android:layout_width="70dp"
             android:layout_height="match_parent"
-            android:layout_gravity="start"
+            android:layout_gravity="center_vertical"
             android:layout_weight="1"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
             android:importantForAccessibility="no"
             android:scaleType="fitStart" />
 

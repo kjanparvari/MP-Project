@@ -49,6 +49,48 @@ val sampleAnnouncements = listOf<Announcement>(
         "1400-05-12",
         "sample description to sell this book"
     ),
+    Announcement(
+        sampleBooks.first(),
+        sampleUsers.first(),
+        60000,
+        "1400-07-15",
+        "sample description to sell this book"
+    ),
+    Announcement(
+        sampleBooks[1],
+        sampleUsers.first(),
+        45000,
+        "1400-05-12",
+        "sample description to sell this book"
+    ),
+    Announcement(
+        sampleBooks.first(),
+        sampleUsers.first(),
+        60000,
+        "1400-07-15",
+        "sample description to sell this book"
+    ),
+    Announcement(
+        sampleBooks[1],
+        sampleUsers.first(),
+        45000,
+        "1400-05-12",
+        "sample description to sell this book"
+    ),
+    Announcement(
+        sampleBooks.first(),
+        sampleUsers.first(),
+        60000,
+        "1400-07-15",
+        "sample description to sell this book"
+    ),
+    Announcement(
+        sampleBooks[1],
+        sampleUsers.first(),
+        45000,
+        "1400-05-12",
+        "sample description to sell this book"
+    ),
 )
 
 class Datasource {
