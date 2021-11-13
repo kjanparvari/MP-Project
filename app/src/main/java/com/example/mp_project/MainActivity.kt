@@ -17,7 +17,8 @@ class MainActivity : AppCompatActivity() {
         recyclerView.adapter = ItemAdapter(this, myAnnouncements)
         recyclerView.setHasFixedSize(true)
         val intent = Intent(this, BookActivity1::class.java)
-        this.startActivity(intent)
+        val intentAd = Intent(this, AdvertismentActivity::class.java)
+        this.startActivity(intentAd)
 
 
 

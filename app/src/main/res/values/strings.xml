@@ -5,4 +5,5 @@
     <string name="add_comment">ثبت نظر</string>
     <string name="like">پسندیدم</string>
     <string name="dislike">نپسندیدم</string>
+    <string name="phoneNumber">شماره تماس :</string>
 </resources>
