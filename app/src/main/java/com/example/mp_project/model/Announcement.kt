@@ -10,7 +10,5 @@ class Announcement(
     val price: Int,
     val time: String, // TODO: Change Type
     val description: String,
-
-
 ) {
 }

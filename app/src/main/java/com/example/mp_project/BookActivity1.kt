@@ -28,10 +28,10 @@ class BookActivity1 : AppCompatActivity() {
         val textcat: TextView = findViewById(R.id.category)
         textcat.text = "دسته بندی : رمان"
         val texttit: TextView = findViewById(R.id.title)
-        texttit.text = "عنوان کتاب : هری پاتر و سنگ جادو"
+        texttit.text = "هری پاتر و سنگ جادو"
 
 
-        description.text = " The Fault In Our Stars is a fabulous book about a young teenage girl who has been diagnosed with lung cancer and attends a cancer support group. Hazel is 16 and is reluctant to go to the support group, but she soon realises that it was a good idea. Hazel meets a young boy named Augustus Waters."
+        description.text = "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها "
 
 
     }
