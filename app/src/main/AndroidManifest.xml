@@ -22,7 +22,7 @@
             android:name=".AdvertismentActivity"
             android:exported="true" />
         <activity
-            android:name=".BookActivity1"
+            android:name=".BookActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

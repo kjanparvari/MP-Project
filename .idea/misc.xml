@@ -3,10 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Projects/Android/MPProject/app/src/main/res/drawable/fault_in_our_stars_ad.xml" value="0.1453125" />
         <entry key="..\:/Coding/Kotlin/MP-Project/app/src/main/res/layout/activity_advertisement_view.xml" value="0.36666666666666664" />
         <entry key="..\:/Coding/Kotlin/MP-Project/app/src/main/res/layout/activity_advertisment.xml" value="0.26902173913043476" />
         <entry key="..\:/Coding/Kotlin/MP-Project/app/src/main/res/layout/activity_advertisment_view.xml" value="0.20520833333333333" />
-        <entry key="..\:/Coding/Kotlin/MP-Project/app/src/main/res/layout/activity_book1.xml" value="0.35260416666666666" />
+        <entry key="..\:/Coding/Kotlin/MP-Project/app/src/main/res/layout/activity_book.xml" value="0.35260416666666666" />
         <entry key="..\:/Coding/Kotlin/MP-Project/app/src/main/res/layout/activity_login.xml" value="0.36666666666666664" />
         <entry key="..\:/Coding/Kotlin/MP-Project/app/src/main/res/layout/activity_main.xml" value="1.0" />
         <entry key="..\:/Coding/Kotlin/MP-Project/app/src/main/res/layout/activity_register.xml" value="0.33" />
@@ -14,7 +15,7 @@
         <entry key="..\:/Coding/Kotlin/MP-Project/app/src/main/res/layout/book.xml" value="0.26902173913043476" />
         <entry key="..\:/Coding/Kotlin/MP-Project/app/src/main/res/layout/comment_item.xml" value="0.35260416666666666" />
         <entry key="..\:/Projects/Android/MPProject/app/src/main/res/layout/activity_advertisment.xml" value="0.24270833333333333" />
-        <entry key="..\:/Projects/Android/MPProject/app/src/main/res/layout/activity_book1.xml" value="0.24270833333333333" />
+        <entry key="..\:/Projects/Android/MPProject/app/src/main/res/layout/activity_book.xml" value="0.24270833333333333" />
         <entry key="..\:/Projects/Android/MPProject/app/src/main/res/layout/activity_main.xml" value="0.25677083333333334" />
         <entry key="..\:/Projects/Android/MPProject/app/src/main/res/layout/advertisement_panel.xml" value="0.24270833333333333" />
         <entry key="..\:/Projects/Android/MPProject/app/src/main/res/layout/announcement_item.xml" value="0.25677083333333334" />

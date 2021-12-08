@@ -11,7 +11,7 @@ val sampleBooks = listOf<Book>(
         4.8,
         "The Fault In Our Stars is a fabulous book about a young teenage girl who has been diagnosed with lung cancer and attends a cancer support group. Hazel is 16 and is reluctant to go to the support group, but she soon realises that it was a good idea. Hazel meets a young boy named Augustus Waters.",
         listOf<Comment>(),
-        listOf<Announcement>()
+        listOf<Advertisement>()
     ),
     Book(
         R.drawable.harry_potter_and_the_philosopher_s_stone,
@@ -21,7 +21,7 @@ val sampleBooks = listOf<Book>(
         4.7,
         "It is a story about Harry Potter, an orphan brought up by his aunt and uncle because his parents were killed when he was a baby. Harry is unloved by his uncle and aunt but everything changes when he is invited to join Hogwarts School of Witchcraft and Wizardry and he finds out he's a wizard.",
         listOf<Comment>(),
-        listOf<Announcement>()
+        listOf<Advertisement>()
     ),
 )
 
@@ -34,62 +34,86 @@ val sampleUsers = listOf<User>(
     ),
 )
 
-val sampleAnnouncements = listOf<Announcement>(
-    Announcement(
+val sampleAnnouncements = listOf<Advertisement>(
+    Advertisement(
         sampleBooks.first(),
         sampleUsers.first(),
+        R.drawable.fault_in_our_stars_ad,
         60000,
+        "تهران",
         "1400-07-15",
-        "sample description to sell this book"
+        "09687458745",
+         "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها "
     ),
-    Announcement(
+    Advertisement(
         sampleBooks[1],
         sampleUsers.first(),
+        R.drawable.harry_potter_ad,
         45000,
+        "تهران",
         "1400-05-12",
-        "sample description to sell this book"
+        "09687458745",
+        "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها "
     ),
-    Announcement(
+    Advertisement(
         sampleBooks.first(),
         sampleUsers.first(),
+        R.drawable.fault_in_our_stars_ad,
         60000,
+        "تهران",
         "1400-07-15",
-        "sample description to sell this book"
+        "09687458745",
+        "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها "
     ),
-    Announcement(
+    Advertisement(
         sampleBooks[1],
         sampleUsers.first(),
+        R.drawable.harry_potter_ad,
         45000,
+        "تهران",
         "1400-05-12",
-        "sample description to sell this book"
+        "09687458745",
+        "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها "
     ),
-    Announcement(
+    Advertisement(
         sampleBooks.first(),
         sampleUsers.first(),
+        R.drawable.fault_in_our_stars_ad,
         60000,
+        "تهران",
         "1400-07-15",
-        "sample description to sell this book"
+        "09687458745",
+        "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها "
     ),
-    Announcement(
+    Advertisement(
         sampleBooks[1],
         sampleUsers.first(),
+        R.drawable.harry_potter_ad,
         45000,
+        "تهران",
         "1400-05-12",
-        "sample description to sell this book"
+        "09687458745",
+        "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها "
     ),
-    Announcement(
+    Advertisement(
         sampleBooks.first(),
         sampleUsers.first(),
+        R.drawable.fault_in_our_stars_ad,
         60000,
+        "تهران",
         "1400-07-15",
-        "sample description to sell this book"
+        "09687458745",
+        "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها "
     ),
-    Announcement(
+    Advertisement(
         sampleBooks[1],
         sampleUsers.first(),
+        R.drawable.harry_potter_ad,
         45000,
+        "تهران",
         "1400-05-12",
-        "sample description to sell this book"
+        "09687458745",
+        "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها "
     ),
 )
 
@@ -98,7 +122,7 @@ class Datasource {
         return sampleBooks
     }
 
-    fun loadAnnouncements(): List<Announcement> {
+    fun loadAnnouncements(): List<Advertisement> {
         return sampleAnnouncements
     }
 

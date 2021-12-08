@@ -1,6 +1,7 @@
 package com.example.mp_project.model
 
 import androidx.annotation.DrawableRes
+import java.io.Serializable
 
 class Book(
     @DrawableRes val imageId: Int,
@@ -10,6 +11,6 @@ class Book(
     val score: Double,
     val summary: String,
     val comments: List<Comment>,
-    val announcements: List<Announcement>
-) {
+    val advertisements: List<Advertisement>
+): Serializable {
 }
