@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MPProject">
         <activity
-            android:name=".AdvertisementView"
+            android:name=".AdvertisementViewActivity"
             android:exported="true" />
         <activity
             android:name=".AdvertismentActivity"
