@@ -12,6 +12,8 @@
     <string name="login">ورود</string>
     <string name="inputEmail">لطفا ایمیل خود را وارد کنید</string>
     <string name="inputPassword">لطفا رمز خود را وارد کنید</string>
+    <string name="inputPasswordRepeat">لطفا رمز خود را تکرار کنید</string>
     <string name="loginRegisterText">هنوز ثبت نام نکرده اید؟ ثبت نام کنید</string>
+    <string name="registerLoginText">قبلا ثبت نام کرده اید؟</string>
 
 </resources>
