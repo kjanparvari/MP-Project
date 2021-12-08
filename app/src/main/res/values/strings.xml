@@ -6,4 +6,7 @@
     <string name="like">پسندیدم</string>
     <string name="dislike">نپسندیدم</string>
     <string name="phoneNumber">شماره تماس :</string>
+    <string name="price">قیمت :</string>
+    <string name="city">شهر :</string>
+
 </resources>
