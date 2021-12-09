@@ -29,7 +29,6 @@ val sampleUsers = listOf<User>(
     User(
         "Jacob",
         "0848514685454",
-        "Tehran",
         "1397-07-23"
     ),
 )

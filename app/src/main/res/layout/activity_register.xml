@@ -59,12 +59,13 @@
             android:textSize="18sp" />
 
         <Button
-            android:id="@+id/loginSubmitButton"
+            android:id="@+id/registerSubmitButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/register" />
 
         <Button
+            android:id="@+id/registerRedirectToLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/registerLoginText" />

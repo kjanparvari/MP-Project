@@ -40,8 +40,8 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
             android:hint="@string/inputPassword"
-            android:inputType="textVisiblePassword"
-            android:textAlignment="textStart"
+            android:inputType="textPassword"
+            android:textAlignment="textEnd"
             android:textColor="@color/black"
             android:textDirection="rtl"
             android:textSize="18sp" />
@@ -53,6 +53,7 @@
             android:text="@string/login" />
 
         <Button
+            android:id="@+id/LoginRedirectToRegister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/loginRegisterText"
