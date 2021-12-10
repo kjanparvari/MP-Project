@@ -6,6 +6,7 @@
     android:layout_margin="4dp">
 
     <LinearLayout
+        android:background="@drawable/backitem"
         android:id="@+id/advertisement_item_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
