@@ -1,14 +1,15 @@
 package com.example.mp_project
 
 import android.content.Intent
-import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
-import android.widget.TextView
 import android.preference.PreferenceManager
-import android.text.InputType
+import android.util.Log
+import com.example.mp_project.model.User
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 
 
 class LoginActivity : AppCompatActivity() {
@@ -22,18 +23,38 @@ class LoginActivity : AppCompatActivity() {
 //        passwordEditText.inputType = InputType.TYPE_TEXT_VARIATION_PASSWORD
 
         submitBtn.setOnClickListener {
-            if (emailEditText.text.toString() == "admin@admin.com" && passwordEditText.text.toString() == "123456") {
-                val prefs = PreferenceManager.getDefaultSharedPreferences(this)
-                prefs.edit().putBoolean("Islogin", true).apply()
-                val intent = Intent(this, MainActivity::class.java)
-                this.startActivity(intent)
+            val prefs = PreferenceManager.getDefaultSharedPreferences(this)
+            val json = prefs.getString("users", "[]").toString()
+            val type = object : TypeToken<MutableList<User>>() {}.type
+            val users = Gson().fromJson<MutableList<User>>(json, type)
+            Log.d("users", json)
+            Log.d("all", prefs.all.toString())
+            for (u in users) {
+                if (emailEditText.text.toString()
+                        .trim() == u.email && passwordEditText.text.toString() == u.password
+                ) {
+                    prefs.edit().putBoolean("isLogin", true).apply()
+                    val intent = Intent(this, MainActivity::class.java)
+                    this.startActivity(intent)
+                }
             }
+
+
         }
-        redirectBtn.setOnClickListener{
+        redirectBtn.setOnClickListener {
             emailEditText.setText("")
             passwordEditText.setText("")
             val intent = Intent(this, RegisterActivity::class.java)
             this.startActivity(intent)
         }
+    }
+
+    override fun onBackPressed() {
+//        if (shouldAllowBack()) {
+//            super.onBackPressed()
+//        } else {
+//            doSomething()
+//        }
+        return
     }
 }
