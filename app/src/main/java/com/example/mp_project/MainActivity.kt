@@ -18,7 +18,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val prefs = PreferenceManager.getDefaultSharedPreferences(this)
         prefs.edit().putBoolean("Islogin", false).apply()
-        val Islogin = prefs.getBoolean("Islogin", false)
+        val Islogin = true
+            //prefs.getBoolean("Islogin", false)
         Log.d("main", prefs.all.toString())
         if (Islogin) {   // condition true means user is already login
 
