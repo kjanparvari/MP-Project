@@ -23,6 +23,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
+
             android:text="پیش فرض عنوان"
             android:textAlignment="textStart"
             android:textColor="@color/black"
