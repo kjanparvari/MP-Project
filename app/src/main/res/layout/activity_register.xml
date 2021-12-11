@@ -6,69 +6,207 @@
     android:fillViewport="true">
 
     <LinearLayout
+        android:background="@drawable/back3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="5dp">
+        <ImageView
+            android:id="@+id/adPicture6"
 
-        <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
-            android:layout_marginBottom="120dp"
-            android:text="@string/register"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textDirection="rtl"
-            android:textSize="28sp" />
+            android:layout_height="45dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="100dp"
+            android:src="@drawable/ic_baseline_app_registration_24" />
 
-        <EditText
-            android:id="@+id/registerEmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="15dp"
-            android:hint="@string/inputEmail"
-            android:inputType="textEmailAddress"
-            android:textAlignment="textStart"
-            android:textColor="@color/black"
-            android:textDirection="rtl"
-            android:textSize="18sp" />
 
-        <EditText
-            android:id="@+id/registerPassword"
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
-            android:hint="@string/inputPassword"
-            android:inputType="textVisiblePassword"
-            android:textAlignment="textStart"
-            android:textColor="@color/black"
-            android:textDirection="rtl"
-            android:textSize="18sp" />
+            android:orientation="horizontal"
+            android:weightSum="8">
 
-        <EditText
-            android:id="@+id/registerPasswordRepeat"
+            <TextView
+                android:id="@+id/adTitle11"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="0dp"
+                android:layout_weight="1"
+                android:textAlignment="textStart"
+                android:textColor="@color/black"
+
+                android:textDirection="rtl"
+                android:textSize="28sp" />
+
+            <EditText
+                android:id="@+id/registerEmail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:layout_marginBottom="0dp"
+                android:hint="@string/inputEmail"
+                android:inputType="textEmailAddress"
+                android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:textDirection="rtl"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/adPicture4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_baseline_alternate_email_24" />
+
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
-            android:hint="@string/inputPasswordRepeat"
-            android:inputType="textVisiblePassword"
-            android:textAlignment="textStart"
-            android:textColor="@color/black"
-            android:textDirection="rtl"
-            android:textSize="18sp" />
+            android:orientation="horizontal"
+            android:weightSum="8">
+            <TextView
+                android:id="@+id/adTitle12"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="0dp"
+                android:layout_weight="1"
+                android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:textDirection="rtl"
+                android:textSize="28sp" />
 
-        <Button
-            android:id="@+id/registerSubmitButton"
+            <EditText
+                android:id="@+id/registerPassword"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:layout_marginBottom="0dp"
+                android:hint="@string/inputPassword"
+                android:inputType="textPassword"
+                android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:textDirection="rtl"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/adPicture5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_baseline_lock_24" />
+
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/register" />
+            android:layout_marginBottom="15dp"
+            android:orientation="horizontal"
+            android:weightSum="8">
+            <TextView
+                android:id="@+id/adTitle1233"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="0dp"
+                android:layout_weight="1"
+                android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:textDirection="rtl"
+                android:textSize="28sp" />
 
-        <Button
-            android:id="@+id/registerRedirectToLogin"
+            <EditText
+                android:id="@+id/registerPasswordRepeat"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:layout_marginBottom="0dp"
+                android:hint="@string/inputPasswordRepeat"
+                android:inputType="textVisiblePassword"
+                android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:textDirection="rtl"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/adPicture544"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_baseline_lock_24" />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/registerLoginText" />
+            android:layout_marginBottom="15dp"
+            android:orientation="horizontal"
+            android:weightSum="8">
+            <TextView
+                android:id="@+id/adTitle123"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="0dp"
+                android:layout_weight="3"
+                android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:textDirection="rtl"
+                android:textSize="28sp" />
+            <Button
+                android:layout_weight="2"
+                android:id="@+id/registerSubmitButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/register" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:orientation="horizontal"
+            android:weightSum="9">
+            <TextView
+                android:id="@+id/adTitle1234"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="0dp"
+                android:layout_weight="1.5"
+                android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:textDirection="rtl"
+                android:textSize="28sp" />
+            <Button
+                android:id="@+id/registerRedirectToLogin"
+                android:layout_width="0dp"
+                android:layout_weight="6"
+                android:layout_height="wrap_content"
+                android:text="@string/registerLoginText"
+                />
+
+        </LinearLayout>
+
+
 
     </LinearLayout>
 </ScrollView>

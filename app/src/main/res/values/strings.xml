@@ -3,7 +3,8 @@
     <string name="app_title">قفسه</string>
     <string name="splash_text">هر آنچه از کتاب نیاز داری</string>
     <string name="related_ads">آگهی های مرتبط</string>
-    <string name="search_bar_hint">جست و چو در کتاب ها</string>
+    <string name="advertisement_search_bar_hint">جست و جو در آگهی ها</string>
+    <string name="book_search_bar_hint">جست و جو در کتاب ها</string>
     <string name="add_comment">ثبت نظر</string>
     <string name="like">پسندیدم</string>
     <string name="dislike">نپسندیدم</string>
