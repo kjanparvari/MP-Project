@@ -33,7 +33,7 @@ class ItemAdapter(private val context: Context, private val dataset: List<Advert
         holder.titleTextView.text = item.book.title
         holder.priceTextView.text = "قیمت : ${item.price}"
         holder.timeTextView.text = "تاریخ : ${item.time}"
-        holder.imageView.setImageResource(item.book.imageId)
+        holder.imageView.setImageResource(item.imageId)
         val intentAd = Intent(context, AdvertismentActivity::class.java)
         intentAd.putExtra("ad", item)
         holder.container.setOnClickListener{

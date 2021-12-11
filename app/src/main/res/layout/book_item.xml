@@ -9,7 +9,7 @@
     >
 
     <LinearLayout
-        android:id="@+id/advertisement_item_container"
+        android:id="@+id/book_item_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/backitem"
@@ -23,7 +23,7 @@
             android:padding="10dp">
 
             <TextView
-                android:id="@+id/announcement_item_title"
+                android:id="@+id/book_item_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13dp"
@@ -33,7 +33,7 @@
                 android:textSize="18sp" />
 
             <TextView
-                android:id="@+id/announcement_item_price"
+                android:id="@+id/book_item_category"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
@@ -43,7 +43,7 @@
                 android:textSize="16sp" />
 
             <TextView
-                android:id="@+id/announcement_item_time"
+                android:id="@+id/book_item_score"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
@@ -65,7 +65,7 @@
             app:cardCornerRadius="8dp">
 
             <ImageView
-                android:id="@+id/announcement_item_image"
+                android:id="@+id/book_item_image"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:importantForAccessibility="no"

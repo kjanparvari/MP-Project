@@ -4,16 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".BooksListActivity">
 
 
     <LinearLayout
-        android:id="@+id/main_linear_layout"
+        android:id="@+id/books_list_linear_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/light_gray"
         android:orientation="vertical"
-        tools:context=".MainActivity"
+        tools:context=".BooksListActivity"
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="1dp">
 
@@ -30,7 +30,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="9"
                 android:autofillHints=""
-                android:hint="@string/advertisement_search_bar_hint"
+                android:hint="@string/book_search_bar_hint"
                 android:inputType="text"
                 android:background="@android:color/transparent"
                 android:textAlignment="textStart"
@@ -41,7 +41,7 @@
                 android:layout_weight="1"
                 android:layout_height="30dp"
                 android:layout_gravity="center_vertical"
-                android:contentDescription="@string/advertisement_search_bar_hint"
+                android:contentDescription="@string/book_search_bar_hint"
                 android:src="@drawable/search_logo">
 
             </ImageView>
@@ -54,7 +54,7 @@
             android:layout_height="match_parent">
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/announcements_recycler_view"
+                android:id="@+id/books_list_recycler_view"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scrollbars="vertical"
