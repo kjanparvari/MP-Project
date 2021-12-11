@@ -9,4 +9,9 @@
     <color name="white">#FFFFFFFF</color>
     <color name="button_color">#95d5b2</color>
     <color name="light_gray">#d3d3d3</color>
+
+    <color name="add_Advertisement_image_background">#E1E1E1</color>
+    <color name="gray_900">#212121</color>
+    <color name="blue_gray_700">#37474F</color>
+
 </resources>

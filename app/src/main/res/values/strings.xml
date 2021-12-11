@@ -18,4 +18,19 @@
     <string name="loginRegisterText">هنوز ثبت نام نکرده اید؟ ثبت نام کنید</string>
     <string name="registerLoginText">قبلا ثبت نام کرده اید؟</string>
 
+    <string name="add_label">افزودن آگهی</string>
+    <string name="add_title" >عنوان آگهی</string>
+    <string name="add_book_name" >اسم کتاب</string>
+    <string name="add_phoneNumber" >شماره موبایل</string>
+    <string name="add_price" >قیمت (تومان)</string>
+    <string name="add_city" >شهر</string>
+    <string name="add_description" >توضیحات</string>
+    <string name="register_advertisement" >ثبت آگهی</string>
+
+    <string name="title_select_image_action">نوع ورودی را انتخاب کنید</string>
+    <string name="lbl_camera" >دوربین</string>
+    <string name="lbl_gallery" >گالری</string>
+
+
+
 </resources>
