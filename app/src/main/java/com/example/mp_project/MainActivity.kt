@@ -20,7 +20,8 @@ class MainActivity : AppCompatActivity() {
 //        prefs.edit().clear().apply()
         val isLogin = prefs.getBoolean("isLogin", false)
         Log.d("main", prefs.all.toString())
-        if (isLogin) {   // condition true means user is already login
+        val isLogin2 = false
+        if (isLogin2) {   // condition true means user is already login
 
         } else {
             val intent = Intent(this, LoginActivity::class.java)

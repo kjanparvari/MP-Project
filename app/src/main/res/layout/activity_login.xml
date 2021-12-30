@@ -42,18 +42,37 @@
                 android:textDirection="rtl"
                 android:textSize="28sp" />
 
-            <EditText
-                android:id="@+id/loginEmail"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/cost_of_service"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="5"
                 android:layout_marginBottom="0dp"
                 android:hint="@string/inputEmail"
+                android:textColorHint="@color/black"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/loginEmail"
                 android:inputType="textEmailAddress"
                 android:textAlignment="textStart"
+                android:background="@color/teal_200"
                 android:textColor="@color/black"
                 android:textDirection="rtl"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                />
+
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
 
             <ImageView
                 android:id="@+id/adPicture4"
@@ -87,18 +106,38 @@
                 android:textDirection="rtl"
                 android:textSize="28sp" />
 
-            <EditText
-                android:id="@+id/loginPassword"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/logpass"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="5"
                 android:layout_marginBottom="0dp"
                 android:hint="@string/inputPassword"
+                android:textColorHint="@color/black"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/loginPassword"
                 android:inputType="textPassword"
                 android:textAlignment="textStart"
+                android:background="@color/teal_200"
                 android:textColor="@color/black"
                 android:textDirection="rtl"
-                android:textSize="20sp" />
+
+                android:textSize="20sp"
+
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
 
             <ImageView
                 android:id="@+id/adPicture5"
@@ -127,19 +166,31 @@
                 android:textColor="@color/black"
                 android:textDirection="rtl"
                 android:textSize="28sp" />
-            <Button
-                android:layout_weight="2"
+
+
+
+
+            <com.google.android.material.button.MaterialButton
+                app:backgroundTint="#223D8C"
+                app:rippleColor="#ffee33"
+
+                app:strokeColor="#13ACD1"
+                app:strokeWidth="3dp"
+                app:icon="@drawable/ic_baseline_login_24"
                 android:id="@+id/loginSubmitButton"
                 android:layout_width="0dp"
+                android:layout_weight="2"
                 android:layout_height="wrap_content"
-                android:text="@string/login" />
+                android:text="@string/login"
+
+                />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="15dp"
+
             android:orientation="horizontal"
             android:weightSum="9">
             <TextView
@@ -147,17 +198,24 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="0dp"
-                android:layout_weight="1.5"
+                android:layout_weight="2.5"
                 android:textAlignment="textStart"
                 android:textColor="@color/black"
                 android:textDirection="rtl"
                 android:textSize="28sp" />
-            <Button
+            <com.google.android.material.button.MaterialButton
+                app:backgroundTint="#223D8C"
+                app:rippleColor="#ffee33"
+
+                app:strokeColor="#13ACD1"
+                app:strokeWidth="3dp"
+                app:icon="@drawable/ic_baseline_app_registration_24"
                 android:id="@+id/LoginRedirectToRegister"
                 android:layout_width="0dp"
-                android:layout_weight="6"
+                android:layout_weight="4"
                 android:layout_height="wrap_content"
                 android:text="@string/loginRegisterText"
+
                 />
 
         </LinearLayout>

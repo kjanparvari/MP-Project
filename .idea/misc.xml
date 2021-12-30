@@ -3,43 +3,50 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Coding/Kotlin/MP-Project/app/src/main/res/drawable/ic_camera.xml" value="0.3402777777777778" />
-        <entry key="..\:/Coding/Kotlin/MP-Project/app/src/main/res/drawable/ic_gallery.xml" value="0.3402777777777778" />
-        <entry key="..\:/Coding/Kotlin/MP-Project/app/src/main/res/layout/activity_add_advertisement.xml" value="0.32592592592592595" />
         <entry key="..\:/Coding/Kotlin/MP-Project/app/src/main/res/layout/activity_advertisement_view.xml" value="0.36666666666666664" />
         <entry key="..\:/Coding/Kotlin/MP-Project/app/src/main/res/layout/activity_advertisment.xml" value="0.26902173913043476" />
         <entry key="..\:/Coding/Kotlin/MP-Project/app/src/main/res/layout/activity_advertisment_view.xml" value="0.20520833333333333" />
-        <entry key="..\:/Coding/Kotlin/MP-Project/app/src/main/res/layout/activity_book1.xml" value="0.35260416666666666" />
-        <entry key="..\:/Coding/Kotlin/MP-Project/app/src/main/res/layout/activity_login.xml" value="0.25" />
+        <entry key="..\:/Coding/Kotlin/MP-Project/app/src/main/res/layout/activity_book.xml" value="0.35260416666666666" />
+        <entry key="..\:/Coding/Kotlin/MP-Project/app/src/main/res/layout/activity_login.xml" value="0.36666666666666664" />
         <entry key="..\:/Coding/Kotlin/MP-Project/app/src/main/res/layout/activity_main.xml" value="1.0" />
         <entry key="..\:/Coding/Kotlin/MP-Project/app/src/main/res/layout/activity_register.xml" value="0.33" />
-        <entry key="..\:/Coding/Kotlin/MP-Project/app/src/main/res/layout/activity_splash.xml" value="0.1" />
         <entry key="..\:/Coding/Kotlin/MP-Project/app/src/main/res/layout/announcement_item.xml" value="0.26902173913043476" />
         <entry key="..\:/Coding/Kotlin/MP-Project/app/src/main/res/layout/book.xml" value="0.26902173913043476" />
         <entry key="..\:/Coding/Kotlin/MP-Project/app/src/main/res/layout/comment_item.xml" value="0.35260416666666666" />
-        <entry key="..\:/Coding/Kotlin/MP-Project/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.22135416666666666" />
-        <entry key="..\:/Coding/Kotlin/MP-Project/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.22135416666666666" />
-        <entry key="..\:/Projects/Android/MPProject/app/src/main/res/layout/activity_advertisement_view.xml" value="0.24270833333333333" />
-        <entry key="..\:/Coding/Kotlin/MP-Project/app/src/main/res/layout/dialog_image_selection.xml" value="0.32592592592592595" />
-        <entry key="..\:/Coding/Kotlin/MP-Project/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.22135416666666666" />
-        <entry key="..\:/Coding/Kotlin/MP-Project/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.22135416666666666" />
+        <entry key="..\:/Projects/Android/MPProject/app/src/main/res/drawable/fault_in_our_stars_ad.xml" value="0.1453125" />
         <entry key="..\:/Projects/Android/MPProject/app/src/main/res/layout/activity_advertisment.xml" value="0.24270833333333333" />
-        <entry key="..\:/Projects/Android/MPProject/app/src/main/res/layout/activity_book1.xml" value="0.24270833333333333" />
-        <entry key="..\:/Projects/Android/MPProject/app/src/main/res/layout/activity_books_list.xml" value="0.25677083333333334" />
-        <entry key="..\:/Projects/Android/MPProject/app/src/main/res/layout/activity_book1.xml" value="0.24270833333333333" />
+        <entry key="..\:/Projects/Android/MPProject/app/src/main/res/layout/activity_book.xml" value="0.24270833333333333" />
         <entry key="..\:/Projects/Android/MPProject/app/src/main/res/layout/activity_main.xml" value="0.25677083333333334" />
-        <entry key="..\:/Projects/Android/MPProject/app/src/main/res/layout/activity_register.xml" value="0.25677083333333334" />
         <entry key="..\:/Projects/Android/MPProject/app/src/main/res/layout/advertisement_panel.xml" value="0.24270833333333333" />
         <entry key="..\:/Projects/Android/MPProject/app/src/main/res/layout/announcement_item.xml" value="0.25677083333333334" />
-        <entry key="..\:/Projects/Android/MPProject/app/src/main/res/layout/book_item.xml" value="0.25677083333333334" />
-        <entry key="..\:/Projects/Android/MPProject/app/src/main/res/layout/books_item.xml" value="0.24270833333333333" />
-        <entry key="..\:/Projects/Android/MPProject/app/src/main/res/layout/comment_item.xml" value="0.11510416666666666" />
         <entry key="..\:/Projects/Android/MPProject/app/src/main/res/layout/layout_rounded_bg.xml" value="0.25677083333333334" />
+        <entry key="..\:/Users/aaa65/AndroidStudioProjects/MP-Project/app/src/main/res/drawable/ic_baseline_alternate_email_24.xml" value="0.22135416666666666" />
+        <entry key="..\:/Users/aaa65/AndroidStudioProjects/MP-Project/app/src/main/res/drawable/ic_baseline_app_registration_24.xml" value="0.22135416666666666" />
+        <entry key="..\:/Users/aaa65/AndroidStudioProjects/MP-Project/app/src/main/res/drawable/ic_baseline_attach_money_24.xml" value="0.22135416666666666" />
+        <entry key="..\:/Users/aaa65/AndroidStudioProjects/MP-Project/app/src/main/res/drawable/ic_baseline_date_range_24.xml" value="0.22135416666666666" />
+        <entry key="..\:/Users/aaa65/AndroidStudioProjects/MP-Project/app/src/main/res/drawable/ic_baseline_location_city_24.xml" value="0.22135416666666666" />
+        <entry key="..\:/Users/aaa65/AndroidStudioProjects/MP-Project/app/src/main/res/drawable/ic_baseline_lock_24.xml" value="0.22135416666666666" />
+        <entry key="..\:/Users/aaa65/AndroidStudioProjects/MP-Project/app/src/main/res/drawable/ic_baseline_login_24.xml" value="0.22135416666666666" />
+        <entry key="..\:/Users/aaa65/AndroidStudioProjects/MP-Project/app/src/main/res/drawable/ic_baseline_phone_24.xml" value="0.22135416666666666" />
+        <entry key="..\:/Users/aaa65/AndroidStudioProjects/MP-Project/app/src/main/res/drawable/ic_baseline_title_24.xml" value="0.22135416666666666" />
+        <entry key="..\:/Users/aaa65/AndroidStudioProjects/MP-Project/app/src/main/res/drawable/ic_camera.xml" value="0.3828125" />
+        <entry key="..\:/Users/aaa65/AndroidStudioProjects/MP-Project/app/src/main/res/drawable/ic_gallery.xml" value="0.22135416666666666" />
+        <entry key="..\:/Users/aaa65/AndroidStudioProjects/MP-Project/app/src/main/res/drawable/search_logo.xml" value="0.22135416666666666" />
+        <entry key="..\:/Users/aaa65/AndroidStudioProjects/MP-Project/app/src/main/res/drawable/textview_border.xml" value="0.22135416666666666" />
+        <entry key="..\:/Users/aaa65/AndroidStudioProjects/MP-Project/app/src/main/res/layout/activity_add_advertisement.xml" value="0.35260416666666666" />
+        <entry key="..\:/Users/aaa65/AndroidStudioProjects/MP-Project/app/src/main/res/layout/activity_advertisement_view.xml" value="0.1" />
+        <entry key="..\:/Users/aaa65/AndroidStudioProjects/MP-Project/app/src/main/res/layout/activity_advertisment.xml" value="0.19114583333333332" />
+        <entry key="..\:/Users/aaa65/AndroidStudioProjects/MP-Project/app/src/main/res/layout/activity_book.xml" value="0.35260416666666666" />
+        <entry key="..\:/Users/aaa65/AndroidStudioProjects/MP-Project/app/src/main/res/layout/activity_login.xml" value="0.33" />
         <entry key="..\:/Users/aaa65/AndroidStudioProjects/MP-Project/app/src/main/res/layout/activity_main.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/aaa65/AndroidStudioProjects/MP-Project/app/src/main/res/layout/activity_register.xml" value="0.22554347826086957" />
+        <entry key="..\:/Users/aaa65/AndroidStudioProjects/MP-Project/app/src/main/res/layout/activity_splash.xml" value="0.35260416666666666" />
         <entry key="..\:/Users/aaa65/AndroidStudioProjects/MP-Project/app/src/main/res/layout/advertisement_panel.xml" value="0.19114583333333332" />
         <entry key="..\:/Users/aaa65/AndroidStudioProjects/MP-Project/app/src/main/res/layout/announcement_item.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/aaa65/AndroidStudioProjects/MP-Project/app/src/main/res/layout/book.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/aaa65/AndroidStudioProjects/MP-Project/app/src/main/res/layout/book_item.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/aaa65/AndroidStudioProjects/MP-Project/app/src/main/res/layout/comment_item.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/aaa65/AndroidStudioProjects/MP-Project/app/src/main/res/layout/dialog_image_selection.xml" value="0.35260416666666666" />
       </map>
     </option>
   </component>

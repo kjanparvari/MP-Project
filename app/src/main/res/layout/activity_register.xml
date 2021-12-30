@@ -42,18 +42,37 @@
                 android:textDirection="rtl"
                 android:textSize="28sp" />
 
-            <EditText
-                android:id="@+id/registerEmail"
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/regem"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="5"
                 android:layout_marginBottom="0dp"
                 android:hint="@string/inputEmail"
-                android:inputType="textEmailAddress"
-                android:textAlignment="textStart"
-                android:textColor="@color/black"
-                android:textDirection="rtl"
-                android:textSize="20sp" />
+                android:textColorHint="@color/black"
+
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/registerEmail"
+                    android:inputType="textEmailAddress"
+                    android:textAlignment="textStart"
+                    android:background="@color/teal_200"
+                    android:textColor="@color/black"
+                    android:textDirection="rtl"
+
+                    android:textSize="20sp"
+
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
 
             <ImageView
                 android:id="@+id/adPicture4"
@@ -86,18 +105,36 @@
                 android:textDirection="rtl"
                 android:textSize="28sp" />
 
-            <EditText
-                android:id="@+id/registerPassword"
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/regpass"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="5"
                 android:layout_marginBottom="0dp"
                 android:hint="@string/inputPassword"
-                android:inputType="textPassword"
-                android:textAlignment="textStart"
-                android:textColor="@color/black"
-                android:textDirection="rtl"
-                android:textSize="20sp" />
+                android:textColorHint="@color/black"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/registerPassword"
+                    android:inputType="textPassword"
+                    android:textAlignment="textStart"
+                    android:background="@color/teal_200"
+                    android:textColor="@color/black"
+                    android:textDirection="rtl"
+
+                    android:textSize="20sp"
+
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
 
             <ImageView
                 android:id="@+id/adPicture5"
@@ -130,18 +167,36 @@
                 android:textDirection="rtl"
                 android:textSize="28sp" />
 
-            <EditText
-                android:id="@+id/registerPasswordRepeat"
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/regpassR"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="5"
                 android:layout_marginBottom="0dp"
                 android:hint="@string/inputPasswordRepeat"
-                android:inputType="textVisiblePassword"
-                android:textAlignment="textStart"
-                android:textColor="@color/black"
-                android:textDirection="rtl"
-                android:textSize="20sp" />
+                android:textColorHint="@color/black"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/registerPasswordRepeat"
+                    android:inputType="textVisiblePassword"
+                    android:textAlignment="textStart"
+                    android:background="@color/teal_200"
+                    android:textColor="@color/black"
+                    android:textDirection="rtl"
+
+                    android:textSize="20sp"
+
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
 
             <ImageView
                 android:id="@+id/adPicture544"
@@ -170,7 +225,12 @@
                 android:textColor="@color/black"
                 android:textDirection="rtl"
                 android:textSize="28sp" />
-            <Button
+            <com.google.android.material.button.MaterialButton
+                app:backgroundTint="#223D8C"
+                app:rippleColor="#ffee33"
+
+                app:strokeColor="#13ACD1"
+                app:strokeWidth="3dp"
                 android:layout_weight="2"
                 android:id="@+id/registerSubmitButton"
                 android:layout_width="0dp"
@@ -196,7 +256,12 @@
                 android:textColor="@color/black"
                 android:textDirection="rtl"
                 android:textSize="28sp" />
-            <Button
+            <com.google.android.material.button.MaterialButton
+                app:backgroundTint="#223D8C"
+                app:rippleColor="#ffee33"
+
+                app:strokeColor="#13ACD1"
+                app:strokeWidth="3dp"
                 android:id="@+id/registerRedirectToLogin"
                 android:layout_width="0dp"
                 android:layout_weight="6"
