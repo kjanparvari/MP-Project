@@ -3,6 +3,7 @@ package com.example.mp_project.serverModel.advertisements
 import android.content.Context
 import android.content.Intent
 import android.media.Image
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,6 +14,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.mp_project.AdvertismentActivity
 import com.example.mp_project.R
 import com.example.mp_project.model.Advertisement
+import com.squareup.picasso.Picasso
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
+import java.util.*
+
+const val BASE_URL = "https://agile-reaches-72185.herokuapp.com/api/"
 
 class AdvertisementListItemAdapter(
     private val context: Context,
@@ -39,7 +46,12 @@ class AdvertisementListItemAdapter(
         val item: AdvertisementsListItem = dataset[position]
         holder.titleTextView.text = item.title
         holder.priceTextView.text = "قیمت : ${item.price}"
-        holder.timeTextView.text = "تاریخ : ${item.time}"
+//        holder.timeTextView.text = "تاریخ : ${LocalDate.parse(item.time,DateTimeFormatter.ISO_INSTANT).toString()}"
+        holder.timeTextView.text =
+            if (item.time == null || item.time.isEmpty()) "salam" else "تاریخ : ${item.time}"
+        Log.v("Program", BASE_URL + item.imageUrl)
+        Picasso.get().load(BASE_URL + item.imageUrl).into(holder.imageView)
+
 //        holder.imageView.setImageResource(item.imageId)
         val intentAd = Intent(context, AdvertismentActivity::class.java)
 //        intentAd.putExtra("ad", item)

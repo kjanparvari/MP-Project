@@ -6,6 +6,7 @@ data class AdvertisementsListItem(
     val bookId: String,
     val city: String,
     val description: String,
+    val imageUrl: String,
     val phoneNumber: String,
     val price: Int,
     val time: String,
