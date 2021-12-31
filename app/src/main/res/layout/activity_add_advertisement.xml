@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddAdvertisementActivity">
+    tools:context=".AddAdvertisementActivity"
+    android:background="@drawable/back3">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/add_Advertisement_toolbar"

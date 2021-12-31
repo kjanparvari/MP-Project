@@ -40,6 +40,7 @@ class SplashActivity : AppCompatActivity() {
             override fun onAnimationEnd(p0: Animation?) {
                 Handler(Looper.getMainLooper()).postDelayed({
                     startActivity(Intent(this@SplashActivity, MainActivity::class.java))
+//                    startActivity(Intent(this@SplashActivity, AddAdvertisementActivity::class.java))
                 }, 1000)
             }
 

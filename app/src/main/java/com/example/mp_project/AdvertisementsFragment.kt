@@ -2,16 +2,28 @@ package com.example.mp_project
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.mp_project.model.Advertisement
 import com.example.mp_project.model.Datasource
+import com.example.mp_project.serverModel.advertisements.AdvertisementsListItem
+import com.example.mp_project.serverModel.advertisements.ApiAdvertisementsListInterface
 import kotlinx.android.synthetic.main.advertisements_fragment.*
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 import java.io.Serializable
 
+
+const val BASE_URL = "https://agile-reaches-72185.herokuapp.com/api/"
+
 class AdvertisementsFragment : Fragment() {
+
 
     companion object {
         private const val ARG_NAME = "ad"
@@ -57,6 +69,35 @@ class AdvertisementsFragment : Fragment() {
         }
         recyclerView.adapter = AdvertisementItemAdapter(requireContext(), showingAnnouncements)
         recyclerView.setHasFixedSize(true)
+
+
+
+        getAdvertisementFromServer()
+    }
+
+    private fun getAdvertisementFromServer() {
+        val retrofitBuilder = Retrofit.Builder()
+            .addConverterFactory(GsonConverterFactory.create())
+            .baseUrl(BASE_URL)
+            .build()
+            .create(ApiAdvertisementsListInterface::class.java)
+
+        val retrofitData = retrofitBuilder.getAdvertisementList()
+
+        retrofitData.enqueue(object : Callback<List<AdvertisementsListItem>?> {
+            override fun onResponse(
+                call: Call<List<AdvertisementsListItem>?>,
+                response: Response<List<AdvertisementsListItem>?>
+            ) {
+                val responseBody = response.body()!!
+
+                Log.v("Program", responseBody.toString())
+            }
+
+            override fun onFailure(call: Call<List<AdvertisementsListItem>?>, t: Throwable) {
+                Log.d("Program", "Failure: " + t.message)
+            }
+        })
     }
 
 }
