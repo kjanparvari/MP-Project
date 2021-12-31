@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/destination_advertisements">
+    <fragment
+        android:id="@+id/destination_settings"
+        android:name="com.example.mp_project.SettingsFragment"
+        android:label="تنظیمات" />
+    <fragment
+        android:id="@+id/destination_advertisements"
+        android:name="com.example.mp_project.AdvertisementsFragment"
+        android:label="آگهی ها"
+        tools:layout="@layout/advertisements_fragment" />
+    <fragment
+        android:id="@+id/destination_books"
+        android:name="com.example.mp_project.BooksFragment"
+        android:label="کتاب ها"
+        tools:layout="@layout/books_fragment" />
+</navigation>

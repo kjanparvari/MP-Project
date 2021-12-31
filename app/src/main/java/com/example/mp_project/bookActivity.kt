@@ -1,9 +1,12 @@
 package com.example.mp_project
 
 import android.os.Bundle
+import android.util.Log
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.example.mp_project.model.Advertisement
+import com.example.mp_project.model.Book
 
 class BookActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -11,6 +14,8 @@ class BookActivity : AppCompatActivity() {
         setContentView(R.layout.activity_book)
 
 
+        val bookInfo = intent.getSerializableExtra("book") as Book
+        Log.d("hey", bookInfo.title)
 
         val textView: TextView = findViewById(R.id.related_text_4)
         val description: TextView = findViewById(R.id.description)
@@ -19,19 +24,19 @@ class BookActivity : AppCompatActivity() {
 
         imageView.setImageResource(R.drawable.the_faut_in_our_stars)
         textView.text = "اشتباه در ستاره های بخت ما"
-        image_book.setImageResource(R.drawable.harry_potter_and_the_philosopher_s_stone)
+        image_book.setImageResource(bookInfo.imageId)
         val textwriter: TextView = findViewById(R.id.writer)
-        textwriter.text = "نویسنده : J.K. Rowling"
+        textwriter.text = bookInfo.author
         val textpublisher: TextView = findViewById(R.id.publisher)
-        textpublisher.text = "ناشر : "
+        textpublisher.text = "${"ناشر"}ناشر : "
 
         val textcat: TextView = findViewById(R.id.category)
-        textcat.text = "دسته بندی : رمان"
+        textcat.text = "دسته بندی : ${bookInfo.category}"
         val texttit: TextView = findViewById(R.id.title)
-        texttit.text = "هری پاتر و سنگ جادو"
+        texttit.text = bookInfo.title
 
 
-        description.text = "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها "
+        description.text = bookInfo.summary
 
 
     }

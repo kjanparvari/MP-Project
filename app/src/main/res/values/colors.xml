@@ -12,6 +12,9 @@
 
     <color name="add_Advertisement_image_background">#E1E1E1</color>
     <color name="gray_900">#212121</color>
-    <color name="blue_gray_700">#37474F</color>
+    <color name="blue_gray_700">#37474F</color>\
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>\
 
 </resources>

@@ -8,50 +8,72 @@ import com.example.mp_project.model.Advertisement
 import com.example.mp_project.model.Datasource
 import android.preference.PreferenceManager
 
+import android.view.Menu
+import android.view.MenuItem
+import androidx.navigation.NavController
+import androidx.navigation.Navigation
+import androidx.navigation.ui.NavigationUI
+
 import android.content.SharedPreferences
 import android.util.Log
+import androidx.navigation.ui.AppBarConfiguration
+import com.example.mp_project.model.Book
+import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        setSupportActionBar(toolbar)
+
+        val navController = Navigation.findNavController(this, R.id.nav_host_fragment)
+        setupBottomNavMenu(navController)
+        setupActionBar(navController)
+
         val prefs = PreferenceManager.getDefaultSharedPreferences(this)
 //        prefs.edit().clear().apply()
-        val isLogin = prefs.getBoolean("isLogin", false)
+//        val isLogin = prefs.getBoolean("isLogin", false)
+        val isLogin = true
         Log.d("main", prefs.all.toString())
         val isLogin2 = false
-        if (isLogin2) {   // condition true means user is already login
+        if (isLogin) {   // condition true means user is already login
 
         } else {
             val intent = Intent(this, LoginActivity::class.java)
             this.startActivity(intent)
         }
-        val myBooks = Datasource().loadBooks()
-        val myAnnouncements = Datasource().loadAnnouncements()
-        val showingAnnouncements: List<Advertisement>
-        val myUsers = Datasource().loadUsers()
-        val recyclerView = findViewById<RecyclerView>(R.id.announcements_recycler_view)
-
         val adInfo = intent.getSerializableExtra("ad") as? Advertisement
-        showingAnnouncements = if (adInfo == null) {
-            myAnnouncements
-        } else {
-            filterAds(myAnnouncements, adInfo.book.title)
-        }
+        val adFragment = AdvertisementsFragment.newInstance(adInfo)
 
-        recyclerView.adapter = ItemAdapter(this, showingAnnouncements)
-        recyclerView.setHasFixedSize(true)
-
+        val bookInfo = intent.getSerializableExtra("book") as? Book
+        val bookFragment = BooksFragment.newInstance(bookInfo)
     }
-}
 
-fun filterAds(
-    src: List<Advertisement>,
-    name: String,
-//    minPrice: Int,
-//    maxPrice: Int,
-//    city: String,
-): List<Advertisement> {
-    return src.filter { it.book.title.contains(name, ignoreCase = true) }
+    private fun setupBottomNavMenu(navController: NavController) {
+        bottom_nav?.let {
+            NavigationUI.setupWithNavController(it, navController)
+        }
+    }
+
+    private fun setupActionBar(navController: NavController) {
+        NavigationUI.setupActionBarWithNavController(this, navController)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_toolbar, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        val navController = Navigation.findNavController(this, R.id.nav_host_fragment)
+        val navigated = NavigationUI.onNavDestinationSelected(item, navController)
+        return navigated || super.onOptionsItemSelected(item)
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        val navController = Navigation.findNavController(this, R.id.nav_host_fragment)
+        val appBarConfiguration = AppBarConfiguration(navController.graph)
+        return NavigationUI.navigateUp(navController, appBarConfiguration)
+    }
 }

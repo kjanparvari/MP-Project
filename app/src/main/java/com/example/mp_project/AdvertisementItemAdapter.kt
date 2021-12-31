@@ -11,9 +11,9 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mp_project.model.Advertisement
 
-class ItemAdapter(private val context: Context, private val dataset: List<Advertisement>) :
+class AdvertisementItemAdapter(private val context: Context, private val dataset: List<Advertisement>) :
 
-    RecyclerView.Adapter<ItemAdapter.ItemViewHolder>() {
+    RecyclerView.Adapter<AdvertisementItemAdapter.ItemViewHolder>() {
     class ItemViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
         val container: LinearLayout = view.findViewById(R.id.advertisement_item_container)
         val titleTextView: TextView = view.findViewById(R.id.announcement_item_title)
