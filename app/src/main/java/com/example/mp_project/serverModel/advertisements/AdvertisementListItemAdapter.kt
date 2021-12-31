@@ -1,4 +1,4 @@
-package com.example.mp_project
+package com.example.mp_project.serverModel.advertisements
 
 import android.content.Context
 import android.content.Intent
@@ -10,14 +10,16 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.mp_project.AdvertismentActivity
+import com.example.mp_project.R
 import com.example.mp_project.model.Advertisement
 
-class AdvertisementItemAdapter(
+class AdvertisementListItemAdapter(
     private val context: Context,
-    private val dataset: List<Advertisement>
+    private val dataset: List<AdvertisementsListItem>
 ) :
 
-    RecyclerView.Adapter<AdvertisementItemAdapter.ItemViewHolder>() {
+    RecyclerView.Adapter<AdvertisementListItemAdapter.ItemViewHolder>() {
 
     class ItemViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
         val container: LinearLayout = view.findViewById(R.id.advertisement_item_container)
@@ -34,16 +36,16 @@ class AdvertisementItemAdapter(
     }
 
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
-        val item: Advertisement = dataset[position]
-        holder.titleTextView.text = item.book.title
+        val item: AdvertisementsListItem = dataset[position]
+        holder.titleTextView.text = item.title
         holder.priceTextView.text = "قیمت : ${item.price}"
         holder.timeTextView.text = "تاریخ : ${item.time}"
-        holder.imageView.setImageResource(item.imageId)
+//        holder.imageView.setImageResource(item.imageId)
         val intentAd = Intent(context, AdvertismentActivity::class.java)
-        intentAd.putExtra("ad", item)
-        holder.container.setOnClickListener {
-            context.startActivity(intentAd)
-        }
+//        intentAd.putExtra("ad", item)
+//        holder.container.setOnClickListener {
+//            context.startActivity(intentAd)
+//        }
     }
 
     override fun getItemCount(): Int {

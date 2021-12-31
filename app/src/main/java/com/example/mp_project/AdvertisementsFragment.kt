@@ -7,8 +7,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.mp_project.model.Advertisement
 import com.example.mp_project.model.Datasource
+import com.example.mp_project.serverModel.advertisements.AdvertisementListItemAdapter
 import com.example.mp_project.serverModel.advertisements.AdvertisementsListItem
 import com.example.mp_project.serverModel.advertisements.ApiAdvertisementsListInterface
 import kotlinx.android.synthetic.main.advertisements_fragment.*
@@ -43,6 +45,7 @@ class AdvertisementsFragment : Fragment() {
     }
 
     private lateinit var viewModel: AdvertisementsViewModel
+    private lateinit var mAdapter: AdvertisementListItemAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -67,8 +70,10 @@ class AdvertisementsFragment : Fragment() {
         } else {
             filterAds(myAnnouncements, adInfo.book.title)
         }
-        recyclerView.adapter = AdvertisementItemAdapter(requireContext(), showingAnnouncements)
         recyclerView.setHasFixedSize(true)
+        recyclerView.layoutManager = LinearLayoutManager(requireContext())
+        // adapter for local dataset (set by Kamyar)
+        recyclerView.adapter = AdvertisementItemAdapter(requireContext(), showingAnnouncements)
 
 
 
@@ -91,7 +96,12 @@ class AdvertisementsFragment : Fragment() {
             ) {
                 val responseBody = response.body()!!
 
-                Log.v("Program", responseBody.toString())
+                mAdapter = AdvertisementListItemAdapter(requireContext(), responseBody)
+                mAdapter.notifyDataSetChanged()
+                advertisements_recycler_view.adapter = mAdapter
+
+
+//                Log.v("Program", responseBody.toString())
             }
 
             override fun onFailure(call: Call<List<AdvertisementsListItem>?>, t: Throwable) {
