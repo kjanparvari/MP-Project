@@ -1,6 +1,7 @@
 package com.example.mp_project
 
 import android.content.Context
+import android.content.Intent
 import android.view.*
 import android.view.inputmethod.InputMethodManager
 import android.widget.LinearLayout
@@ -22,6 +23,7 @@ import com.example.mp_project.model.Datasource
 import com.example.mp_project.serverModel.advertisements.AdvertisementListItemAdapter
 import com.example.mp_project.serverModel.advertisements.AdvertisementsListItem
 import com.example.mp_project.serverModel.advertisements.ApiAdvertisementsListInterface
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import kotlinx.android.synthetic.main.advertisements_fragment.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -67,6 +69,12 @@ class AdvertisementsFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this).get(AdvertisementsViewModel::class.java)
+
+        val addAdFab = activity?.findViewById<FloatingActionButton>(R.id.add_ad_fab)!!
+        addAdFab.setOnClickListener{
+            val addAdIntent = Intent(requireContext(), AddAdvertisementActivity::class.java)
+            activity?.startActivity(addAdIntent)
+        }
 
         val myAnnouncements = Datasource().loadAnnouncements()
         val showingAnnouncements: List<Advertisement>
@@ -121,13 +129,13 @@ class AdvertisementsFragment : Fragment() {
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         setHasOptionsMenu(true)
+        activity?.actionBar?.title = "testing"
         super.onCreate(savedInstanceState)
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         Log.d("ad", "create")
         inflater.inflate(R.menu.menu_toolbar, menu)
-
         super.onCreateOptionsMenu(menu, inflater)
     }
 

@@ -1,249 +1,265 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AdvertisementsFragment">
 
-    <!--    the search bar      -->
     <LinearLayout
-        android:id="@+id/advertisements_search_bar"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_margin="8dp"
-        android:visibility="gone"
-        android:layout_marginBottom="0dp"
-        android:background="@color/white">
-
-
-        <EditText
-            android:id="@+id/advertisements_search_edit"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="9"
-            android:autofillHints=""
-            android:background="@android:color/transparent"
-            android:hint="@string/advertisement_search_bar_hint"
-            android:inputType="text"
-            android:textAlignment="textStart"
-            android:textSize="20sp" />
-
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_gravity="center_vertical"
-            android:layout_weight="1"
-            android:contentDescription="@string/advertisement_search_bar_hint"
-            android:src="@drawable/search_logo">
-
-        </ImageView>
-
-
-    </LinearLayout>
-    <com.google.android.material.card.MaterialCardView
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/filter_box"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_margin="4dp"
-        app:cardCornerRadius="8dp"
-        android:visibility="gone"
-
-
-        >
-
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <!--    the search bar      -->
         <LinearLayout
-            android:id="@+id/advertisement_item_container"
+            android:id="@+id/advertisements_search_bar"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/backitem"
-            android:orientation="vertical"
-            android:weightSum="8"
-
-            >
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="4"
-                android:orientation="horizontal"
-                android:padding="10dp"
-                android:weightSum="9">
-
-                <!-- Dynamic -->
-
-                <Spinner
-                    android:id="@+id/spinner3"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="0dp"
-                    android:layout_marginEnd="0dp"
-                    android:layout_marginBottom="0dp"
-                    android:layout_weight="3" />
-
-                <!-- Dynamic -->
-
-                <Spinner
-                    android:id="@+id/spinner"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginTop="0dp"
-                    android:layout_marginEnd="0dp"
-                    android:layout_marginBottom="0dp"
-                    android:layout_weight="3" />
-
-                <!-- static -->
+            android:layout_height="50dp"
+            android:layout_margin="8dp"
+            android:layout_marginBottom="0dp"
+            android:background="@color/white"
+            android:visibility="gone">
 
 
-                <Spinner
-                    android:id="@+id/spinner2"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
+            <EditText
+                android:id="@+id/advertisements_search_edit"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="9"
+                android:autofillHints=""
+                android:background="@android:color/transparent"
+                android:hint="@string/advertisement_search_bar_hint"
+                android:inputType="text"
+                android:textAlignment="textStart"
+                android:textSize="20sp" />
 
-                    android:layout_below="@+id/spinner"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="0dp"
-                    android:layout_marginEnd="0dp"
-                    android:layout_marginBottom="0dp"
-                    android:layout_weight="3"
-                    android:entries="@array/city_list" />
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:contentDescription="@string/advertisement_search_bar_hint"
+                android:src="@drawable/search_logo">
 
-
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="4"
-                android:orientation="horizontal"
-                android:padding="10dp"
-                android:weightSum="9">
-
-                <!-- static -->
-
-                <Button
-                    android:id="@+id/button"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginTop="0dp"
-                    android:layout_marginEnd="0dp"
-                    android:layout_marginBottom="0dp"
-                    android:layout_weight="2"
-                    android:onClick="getValues"
-                    android:text="ok" />
-
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/td"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="0dp"
-                    android:layout_marginEnd="0dp"
-                    android:layout_marginBottom="0dp"
-                    android:layout_weight="3"
-
-                    android:hint="تا"
-                    android:textColorHint="@color/black"
-
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/todate"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@color/teal_200"
-                        android:inputType="text"
-                        android:textAlignment="textStart"
-                        android:textColor="@color/black"
-
-
-                        android:textDirection="rtl"
-                        android:textSize="10sp"
-
-                        />
-
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/fd"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="0dp"
-                    android:layout_marginEnd="0dp"
-                    android:layout_marginBottom="0dp"
-                    android:layout_weight="3"
-
-                    android:hint="از"
-                    android:textColorHint="@color/black"
-
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/fromdate"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@color/teal_200"
-                        android:inputType="text"
-                        android:textAlignment="textStart"
-                        android:textColor="@color/black"
-
-
-                        android:textDirection="rtl"
-                        android:textSize="10sp"
-
-                        />
-
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <ImageView
-                    android:id="@+id/adPicture4"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginEnd="0dp"
-                    android:layout_marginBottom="0dp"
-                    android:layout_weight="1"
-                    android:src="@drawable/ic_baseline_date_range_24" />
-
-            </LinearLayout>
+            </ImageView>
 
 
         </LinearLayout>
 
-
-    </com.google.android.material.card.MaterialCardView>
-
-
-    <!--    the recycle view part   -->
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/advertisements_recycler_view"
+        <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/filter_box"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scrollbars="vertical"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
-    </FrameLayout>
+            android:layout_height="150dp"
+            android:layout_margin="4dp"
+            android:visibility="gone"
+            app:cardCornerRadius="8dp"
 
-</LinearLayout>
+
+            >
+
+            <LinearLayout
+                android:id="@+id/advertisement_item_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/backitem"
+                android:orientation="vertical"
+                android:weightSum="8"
+
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="4"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:weightSum="9">
+
+                    <!-- Dynamic -->
+
+                    <Spinner
+                        android:id="@+id/spinner3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:layout_weight="3" />
+
+                    <!-- Dynamic -->
+
+                    <Spinner
+                        android:id="@+id/spinner"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:layout_weight="3" />
+
+                    <!-- static -->
+
+
+                    <Spinner
+                        android:id="@+id/spinner2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+
+                        android:layout_below="@+id/spinner"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:layout_weight="3"
+                        android:entries="@array/city_list" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="4"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:weightSum="9">
+
+                    <!-- static -->
+
+                    <Button
+                        android:id="@+id/button"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:layout_weight="2"
+                        android:onClick="getValues"
+                        android:text="ok" />
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/td"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:layout_weight="3"
+
+                        android:hint="تا"
+                        android:textColorHint="@color/black"
+
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/todate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/teal_200"
+                            android:inputType="text"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/black"
+
+
+                            android:textDirection="rtl"
+                            android:textSize="10sp"
+
+                            />
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/fd"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:layout_weight="3"
+
+                        android:hint="از"
+                        android:textColorHint="@color/black"
+
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/fromdate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/teal_200"
+                            android:inputType="text"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/black"
+
+
+                            android:textDirection="rtl"
+                            android:textSize="10sp"
+
+                            />
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <ImageView
+                        android:id="@+id/adPicture4"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_baseline_date_range_24" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <!--    the recycle view part   -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/advertisements_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_ad_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:background="@color/black"
+        android:contentDescription="TODO"
+        android:src="@drawable/ic_add" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

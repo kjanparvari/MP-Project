@@ -28,6 +28,7 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
         val navController = Navigation.findNavController(this, R.id.nav_host_fragment)
         setupBottomNavMenu(navController)
+        setupActionBar(navController)
 
         val prefs = PreferenceManager.getDefaultSharedPreferences(this)
 //        prefs.edit().clear().apply()
@@ -52,6 +53,14 @@ class MainActivity : AppCompatActivity() {
         bottom_nav?.let {
             NavigationUI.setupWithNavController(it, navController)
         }
+    }
+    private fun setupActionBar(navController: NavController) {
+        NavigationUI.setupActionBarWithNavController(this, navController)
+    }
+    override fun onSupportNavigateUp(): Boolean {
+        val navController = Navigation.findNavController(this, R.id.nav_host_fragment)
+        val appBarConfiguration = AppBarConfiguration(navController.graph)
+        return NavigationUI.navigateUp(navController, appBarConfiguration)
     }
 
 }
