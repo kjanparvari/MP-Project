@@ -28,7 +28,6 @@ import retrofit2.converter.gson.GsonConverterFactory
 import java.io.Serializable
 
 class BooksFragment : Fragment() {
-
     companion object {
         private const val ARG_NAME = "book"
 
