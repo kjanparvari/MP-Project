@@ -49,11 +49,10 @@ class AdvertisementListItemAdapter(
 //        holder.timeTextView.text = "تاریخ : ${LocalDate.parse(item.time,DateTimeFormatter.ISO_INSTANT).toString()}"
         holder.timeTextView.text =
             if (item.time == null || item.time.isEmpty()) "salam" else "تاریخ : ${item.time}"
-        Log.v("Program", BASE_URL + item.imageUrl)
         Picasso.get().load(BASE_URL + item.imageUrl).into(holder.imageView)
 
 //        holder.imageView.setImageResource(item.imageId)
-        val intentAd = Intent(context, AdvertismentActivity::class.java)
+//        val intentAd = Intent(context, AdvertismentActivity::class.java)
 //        intentAd.putExtra("ad", item)
 //        holder.container.setOnClickListener {
 //            context.startActivity(intentAd)

@@ -2,14 +2,26 @@ package com.example.mp_project
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.mp_project.model.Book
 import com.example.mp_project.model.Datasource
+import com.example.mp_project.serverModel.books.ApiBooksListInterface
+import com.example.mp_project.serverModel.books.BooksListItem
+import com.example.mp_project.serverModel.books.BooksListItemAdapter
+import kotlinx.android.synthetic.main.advertisements_fragment.*
 import kotlinx.android.synthetic.main.books_fragment.*
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 import java.io.Serializable
+
 
 class BooksFragment : Fragment() {
 
@@ -31,6 +43,7 @@ class BooksFragment : Fragment() {
     }
 
     private lateinit var viewModel: BooksViewModel
+    private lateinit var mAdapter: BooksListItemAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -53,8 +66,39 @@ class BooksFragment : Fragment() {
         } else {
             filterBooks(myBooks, bookInfo.title)
         }
-        recyclerView.adapter = BookItemAdapter(requireContext(), showingBooks)
         recyclerView.setHasFixedSize(true)
+        recyclerView.layoutManager = LinearLayoutManager(requireContext())
+        // adapter for local dataset (set by Kamyar)
+        recyclerView.adapter = BookItemAdapter(requireContext(), showingBooks)
+
+        getBooksFromServer()
+    }
+
+    private fun getBooksFromServer() {
+        val retrofitBuilder = Retrofit.Builder()
+            .addConverterFactory(GsonConverterFactory.create())
+            .baseUrl(BASE_URL)
+            .build()
+            .create(ApiBooksListInterface::class.java)
+
+        val retrofitData = retrofitBuilder.getBooksList()
+
+        retrofitData.enqueue(object : Callback<List<BooksListItem>?> {
+            override fun onResponse(
+                call: Call<List<BooksListItem>?>,
+                response: Response<List<BooksListItem>?>
+            ) {
+                val responseBody = response.body()!!
+
+                mAdapter = BooksListItemAdapter(requireContext(), responseBody)
+                mAdapter.notifyDataSetChanged()
+                books_recycler_view.adapter = mAdapter
+            }
+
+            override fun onFailure(call: Call<List<BooksListItem>?>, t: Throwable) {
+                Log.d("Program", "Failure: " + t.message)
+            }
+        })
     }
 
 }
