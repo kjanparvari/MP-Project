@@ -16,7 +16,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.mp_project.serverModel.advertisements.BASE_URL
 import com.squareup.picasso.Picasso
 
-class BooksListItemAdapter(private val context: Context, private val dataset: List<BooksListItem>) :
+class BooksListItemAdapter(
+    private val context: Context,
+    private val dataset: List<BooksListItem>
+) :
     RecyclerView.Adapter<BooksListItemAdapter.ItemViewHolder>() {
     class ItemViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
         val container: LinearLayout = view.findViewById(R.id.book_item_container)
@@ -40,11 +43,11 @@ class BooksListItemAdapter(private val context: Context, private val dataset: Li
 //        holder.imageView.setImageResource(item.imageId)
         Picasso.get().load(BASE_URL + item.imageUrl).into(holder.imageView)
 
-//        val intentAd = Intent(context, BookActivity::class.java)
-//        intentAd.putExtra("book", item)
-//        holder.container.setOnClickListener {
-//            context.startActivity(intentAd)
-//        }
+        val intentAd = Intent(context, BookActivity::class.java)
+        intentAd.putExtra("book", item._id)
+        holder.container.setOnClickListener {
+            context.startActivity(intentAd)
+        }
     }
 
 
