@@ -11,6 +11,7 @@ import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
+import android.text.TextUtils
 import android.util.Log
 import android.widget.Toast
 import androidx.core.content.ContextCompat
@@ -23,6 +24,13 @@ import com.bumptech.glide.request.RequestListener
 import com.bumptech.glide.request.target.Target
 import com.example.mp_project.databinding.ActivityAddAdvertisementBinding
 import com.example.mp_project.databinding.DialogImageSelectionBinding
+import com.example.mp_project.serverModel.advertisements.ApiAdvertisementsListInterface
+import com.example.mp_project.serverModel.books.ApiBooksListInterface
+import com.example.mp_project.serverModel.books.BooksListItem
+import com.example.mp_project.serverModel.imageUpload.ApiImageUpload
+import com.example.mp_project.serverModel.imageUpload.ImageUploadResponse
+import com.example.mp_project.serverModel.requestJson.RequestAddAdvertisement
+import com.example.mp_project.serverModel.requestJson.RequestJsonId
 import com.karumi.dexter.Dexter
 import com.karumi.dexter.MultiplePermissionsReport
 import com.karumi.dexter.PermissionToken
@@ -31,11 +39,21 @@ import com.karumi.dexter.listener.PermissionGrantedResponse
 import com.karumi.dexter.listener.PermissionRequest
 import com.karumi.dexter.listener.multi.MultiplePermissionsListener
 import com.karumi.dexter.listener.single.PermissionListener
+import com.squareup.picasso.Picasso
+import okhttp3.MediaType
+import okhttp3.MultipartBody
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 import java.io.File
 import java.io.FileOutputStream
 import java.io.IOException
 import java.io.OutputStream
 import java.util.*
+import okhttp3.RequestBody
+
 
 private lateinit var mBinding: ActivityAddAdvertisementBinding
 private var mImagePath: String = ""
@@ -50,6 +68,88 @@ class AddAdvertisementActivity : AppCompatActivity() {
 
         mBinding.ivAddAdvertisementImage.setOnClickListener {
             imageSelectDialog()
+        }
+
+        mBinding.bRegisterAdvertisement.setOnClickListener {
+            val cTitle = mBinding.etTitle.text.toString().trim { it <= ' ' }
+            val cBookName = mBinding.etBookName.text.toString().trim { it <= ' ' }
+            val cPhoneNumber = mBinding.etPhoneNumber.text.toString().trim { it <= ' ' }
+            val cPrice = Integer.parseInt(mBinding.etPrice.text.toString())
+            val cCity = mBinding.etCity.text.toString().trim { it <= ' ' }
+            val cDes = mBinding.etDescription.text.toString().trim { it <= ' ' }
+
+            when {
+                TextUtils.isEmpty(cTitle) -> {
+
+                }
+                TextUtils.isEmpty(cBookName) -> {
+
+                }
+                TextUtils.isEmpty(cPhoneNumber) -> {
+
+                }
+
+                TextUtils.isEmpty(cDes) -> {
+
+                }
+                TextUtils.isEmpty(mImagePath) -> {
+
+                }
+                else -> {
+                    val retrofitBuilder = Retrofit.Builder()
+                        .addConverterFactory(GsonConverterFactory.create())
+//                        .baseUrl(BASE_URL)
+                        .baseUrl(BASE_URL)
+                        .build()
+                        .create(ApiImageUpload::class.java)
+
+                    val file = File(mImagePath)
+
+                    val fbody = RequestBody.create(
+                        MediaType.parse("multipart/form-data"),
+                        file
+                    )
+
+                    val retrofitData = retrofitBuilder.uploadImage(
+                        MultipartBody.Part.createFormData(
+                            "image",
+                            file.name,
+                            fbody
+                        )
+                    )
+
+                    retrofitData.enqueue(object : Callback<ImageUploadResponse?> {
+                        override fun onResponse(
+                            call: Call<ImageUploadResponse?>,
+                            response: Response<ImageUploadResponse?>
+                        ) {
+                            val responseBody = response.body()!!
+                            Log.d("Program imageUpload", responseBody.toString())
+
+                            val retrofitReqData = Retrofit.Builder()
+                                .addConverterFactory(GsonConverterFactory.create())
+//                        .baseUrl(BASE_URL)
+                                .baseUrl(BASE_URL)
+                                .build()
+                                .create(ApiAdvertisementsListInterface::class.java).sendAd(
+                                    RequestAddAdvertisement(
+                                        "61cdb9a9a99b218ac4946ea1",
+                                        cPrice,
+                                        cCity,
+                                        cDes,
+                                        cPhoneNumber,responseBody.imageUrl,
+                                        cTitle
+                                    )
+                                )
+                        }
+
+                        override fun onFailure(call: Call<ImageUploadResponse?>, t: Throwable) {
+                            Log.d("Program", "Failure: " + t.message)
+                        }
+                    })
+
+                }
+            }
         }
     }
 
