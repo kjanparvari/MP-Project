@@ -8,6 +8,7 @@
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
+        android:background="@drawable/back3"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="10dp">
@@ -18,14 +19,14 @@
             android:layout_marginBottom="0dp"
             android:orientation="horizontal"
             android:padding="0dp"
-            android:weightSum="2">
+            android:weightSum="8">
 
 
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginBottom="0dp"
-                android:layout_weight="1"
+                android:layout_weight="5"
                 android:orientation="vertical"
                 android:paddingTop="20dp"
                 android:weightSum="4">
@@ -34,6 +35,21 @@
                     android:id="@+id/title"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
+
+
+
+
+                    android:shadowColor="#E6B460"
+                    android:shadowDx="12"
+                    android:shadowDy="12"
+                    android:shadowRadius="8"
+                    android:textStyle="bold"
+
+                    android:paddingTop ="2dp"
+
+                    android:paddingRight ="4dp"
+
+
                     android:layout_marginStart="0dp"
                     android:layout_weight="1"
                     android:textAlignment="textStart"
@@ -43,6 +59,19 @@
                 <TextView
                     android:id="@+id/writer"
                     android:layout_width="match_parent"
+
+                    android:typeface="monospace"
+                    android:shadowColor="#E6B460"
+                    android:shadowDx="12"
+                    android:shadowDy="12"
+                    android:shadowRadius="8"
+                    android:textStyle="bold"
+
+                    android:paddingTop ="3dp"
+                    android:paddingLeft ="4dp"
+                    android:paddingRight ="4dp"
+                    android:paddingBottom ="0dp"
+
                     android:layout_height="0dp"
                     android:layout_marginStart="0dp"
                     android:layout_weight="1"
@@ -54,6 +83,19 @@
                     android:id="@+id/publisher"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
+
+                    android:typeface="monospace"
+                    android:shadowColor="#E6B460"
+                    android:shadowDx="12"
+                    android:shadowDy="12"
+                    android:shadowRadius="8"
+                    android:textStyle="bold"
+
+                    android:paddingTop ="3dp"
+                    android:paddingLeft ="4dp"
+                    android:paddingRight ="4dp"
+                    android:paddingBottom ="0dp"
+
                     android:layout_marginStart="0dp"
                     android:layout_weight="1"
                     android:textAlignment="textStart"
@@ -64,6 +106,20 @@
                     android:id="@+id/category"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
+
+                    android:typeface="monospace"
+                    android:shadowColor="#E6B460"
+                    android:shadowDx="12"
+                    android:shadowDy="12"
+                    android:shadowRadius="8"
+                    android:textStyle="bold"
+
+
+                    android:paddingTop ="3dp"
+                    android:paddingLeft ="4dp"
+                    android:paddingRight ="4dp"
+                    android:paddingBottom ="0dp"
+
                     android:layout_marginStart="0dp"
                     android:layout_weight="1"
                     android:textAlignment="textStart"
@@ -72,12 +128,68 @@
 
             </LinearLayout>
 
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingTop="20dp"
+                android:weightSum="4">
+
+                <ImageView
+                    android:id="@+id/title_picture"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+
+                    android:paddingTop ="2dp"
+                    android:paddingLeft ="4dp"
+                    android:paddingRight ="4dp"
+                    android:paddingBottom ="2dp"
+
+                    android:src="@drawable/ic_baseline_title_24"
+
+                    android:layout_marginBottom="0dp"
+                    android:layout_weight="1" />
+                <ImageView
+                    android:id="@+id/writer_picture"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="0dp"
+
+                    android:src="@drawable/ic_baseline_create_24"
+                    android:layout_weight="1" />
+                <ImageView
+                    android:id="@+id/publisher_picture"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+
+
+                    android:paddingTop ="0dp"
+                    android:paddingLeft ="4dp"
+                    android:paddingRight ="4dp"
+                    android:paddingBottom ="3dp"
+
+                    android:layout_marginBottom="0dp"
+                    android:src="@drawable/ic_baseline_location_city_24"
+                    android:layout_weight="1" />
+                <ImageView
+                    android:id="@+id/category_picture"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="0dp"
+                    android:src="@drawable/ic_baseline_category_24"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
             <ImageView
                 android:id="@+id/book_picture"
                 android:layout_width="0dp"
                 android:layout_height="200dp"
                 android:layout_marginBottom="0dp"
-                android:layout_weight="1" />
+                android:layout_weight="2" />
         </LinearLayout>
 
 
@@ -89,12 +201,18 @@
             android:layout_marginTop="10dp"
             android:padding="10dp"
             android:textSize="16sp"
+            android:background="@drawable/backtext"
             android:textAlignment="textStart"
-            android:textDirection="rtl" />
+            android:textDirection="ltr" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:backgroundTint="#223D8C"
+            app:rippleColor="#ffee33"
+
+            app:strokeColor="#13ACD1"
+            app:strokeWidth="3dp"
             android:layout_marginTop="5dp"
             android:text="رفتن به آگهی ها"/>
 
@@ -111,6 +229,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginBottom="0dp"
                 android:layout_weight="1"
+                android:background="@drawable/backtext"
                 android:orientation="vertical"
                 android:weightSum="5">
 
@@ -125,6 +244,12 @@
                     android:id="@+id/related_text_1"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
+
+                    android:shadowColor="#E6B460"
+                    android:shadowDx="12"
+                    android:shadowDy="12"
+                    android:shadowRadius="8"
+                    android:textStyle="bold"
                     android:layout_marginBottom="0dp"
                     android:layout_weight="2"
                     android:textAlignment="center"
@@ -136,6 +261,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginBottom="0dp"
                 android:layout_weight="1"
+                android:background="@drawable/backtext"
                 android:orientation="vertical"
                 android:weightSum="5">
 
@@ -150,6 +276,12 @@
                     android:id="@+id/related_text_2"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
+
+                    android:shadowColor="#E6B460"
+                    android:shadowDx="12"
+                    android:shadowDy="12"
+                    android:shadowRadius="8"
+                    android:textStyle="bold"
                     android:layout_marginBottom="0dp"
                     android:layout_weight="2"
                     android:textAlignment="center"
@@ -161,6 +293,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginBottom="0dp"
                 android:layout_weight="1"
+                android:background="@drawable/backtext"
                 android:orientation="vertical"
                 android:weightSum="5">
 
@@ -175,6 +308,12 @@
                     android:id="@+id/related_text_3"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
+
+                    android:shadowColor="#E6B460"
+                    android:shadowDx="12"
+                    android:shadowDy="12"
+                    android:shadowRadius="8"
+                    android:textStyle="bold"
                     android:layout_marginBottom="0dp"
                     android:layout_weight="2"
                     android:textAlignment="center"
@@ -186,6 +325,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginBottom="0dp"
                 android:layout_weight="1"
+                android:background="@drawable/backtext"
                 android:orientation="vertical"
                 android:weightSum="5">
 
@@ -200,6 +340,13 @@
                     android:id="@+id/related_text_4"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
+
+                    android:shadowColor="#E6B460"
+                    android:shadowDx="12"
+                    android:shadowDy="12"
+                    android:shadowRadius="8"
+                    android:textStyle="bold"
+
                     android:layout_marginBottom="0dp"
                     android:layout_weight="2"
                     android:textAlignment="center"
@@ -229,7 +376,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="8"
-                android:hint="comment"
+                android:hint="متن نظر را وارد کنید"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
@@ -245,18 +392,24 @@
                 android:id="@+id/adComment"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+
+                app:backgroundTint="#223D8C"
+                app:rippleColor="#ffee33"
+
+                app:strokeColor="#13ACD1"
+                app:strokeWidth="3dp"
+
                 android:layout_marginBottom="0dp"
                 android:layout_weight="2"
                 android:background="@color/button_color"
                 android:text="@string/add_comment"
                 android:textAlignment="center"
-                android:textColor="@color/black"
+
                 android:textDirection="rtl"
-                app:backgroundTint="@color/button_color" />
+                 />
         </LinearLayout>
 
 
     </LinearLayout>
 
 </ScrollView>
-

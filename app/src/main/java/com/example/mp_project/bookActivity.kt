@@ -34,8 +34,14 @@ class BookActivity : AppCompatActivity() {
         val imageView: ImageView = findViewById(R.id.related_image_4)
         val image_book: ImageView = findViewById(R.id.book_picture)
         val textwriter: TextView = findViewById(R.id.writer)
+        textwriter.text = " نویسنده: ${bookInfo.author}"
+        val textpublisher: TextView = findViewById(R.id.publisher)
+        textpublisher.text = "${""}ناشر: "
+
         val textcat: TextView = findViewById(R.id.category)
+        textcat.text = "دسته بندی: ${bookInfo.category}"
         val texttit: TextView = findViewById(R.id.title)
+        texttit.text = " عنوان: ${bookInfo.title}"
         val textpublisher: TextView = findViewById(R.id.publisher)
 
 
