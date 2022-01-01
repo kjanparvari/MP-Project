@@ -26,10 +26,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
-
         val navController = Navigation.findNavController(this, R.id.nav_host_fragment)
         setupBottomNavMenu(navController)
-        setupActionBar(navController)
 
         val prefs = PreferenceManager.getDefaultSharedPreferences(this)
 //        prefs.edit().clear().apply()
@@ -56,24 +54,4 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun setupActionBar(navController: NavController) {
-        NavigationUI.setupActionBarWithNavController(this, navController)
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.menu_toolbar, menu)
-        return true
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        val navController = Navigation.findNavController(this, R.id.nav_host_fragment)
-        val navigated = NavigationUI.onNavDestinationSelected(item, navController)
-        return navigated || super.onOptionsItemSelected(item)
-    }
-
-    override fun onSupportNavigateUp(): Boolean {
-        val navController = Navigation.findNavController(this, R.id.nav_host_fragment)
-        val appBarConfiguration = AppBarConfiguration(navController.graph)
-        return NavigationUI.navigateUp(navController, appBarConfiguration)
-    }
 }

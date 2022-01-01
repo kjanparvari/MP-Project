@@ -5,10 +5,6 @@
     android:id="@+id/mobile_navigation"
     app:startDestination="@id/destination_advertisements">
     <fragment
-        android:id="@+id/destination_settings"
-        android:name="com.example.mp_project.SettingsFragment"
-        android:label="تنظیمات" />
-    <fragment
         android:id="@+id/destination_advertisements"
         android:name="com.example.mp_project.AdvertisementsFragment"
         android:label="آگهی ها"

@@ -9,14 +9,17 @@
     tools:context=".AdvertisementsFragment">
 
     <LinearLayout
+        android:id="@+id/books_search_bar"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_margin="8dp"
+        android:visibility="gone"
         android:layout_marginBottom="0dp"
         android:background="@color/white">
 
 
         <EditText
+            android:id="@+id/books_search_edit"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="9"

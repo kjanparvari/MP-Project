@@ -47,6 +47,35 @@
     <string name="attachment_summary_on">Automatically download attachments for incoming emails
     </string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string-array name="city_list">
+        <item>تهران</item>
+        <item>اصفهان</item>
+        <item>مشهد</item>
+        <item>تبریز</item>
+        <item>یزد</item>
+        <item>همدان</item>
+        <item>زاهدان</item>
+        <item>کرمان</item>
+        <item>بوشهر</item>
+        <item>اهواز</item>
+    </string-array>
 
+
+    <string-array name="sort_kind_list">
+        <item>کمترین قیمت</item>
+        <item>بیشترین قیمت</item>
+        <item>زمان</item>
+    </string-array>
+
+    <string-array name="category_list">
+        <item>ادبی</item>
+        <item>درسی</item>
+        <item>سیاسی</item>
+        <item>تاریخی</item>
+        <item>آشپزی</item>
+        <item>علوم انسانی</item>
+        <item>مهندسی</item>
+        <item>اقتصادی</item>
+    </string-array>
 
 </resources>
