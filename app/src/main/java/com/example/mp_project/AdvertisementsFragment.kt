@@ -14,6 +14,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
+import android.widget.Spinner
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.mp_project.model.Advertisement
 import com.example.mp_project.model.Datasource
@@ -83,7 +85,8 @@ class AdvertisementsFragment : Fragment() {
         recyclerView.adapter = AdvertisementItemAdapter(requireContext(), showingAnnouncements)
 
 
-
+        initFilterBox()
+        getFilterBoxValues()
         getAdvertisementFromServer()
     }
 
@@ -124,6 +127,7 @@ class AdvertisementsFragment : Fragment() {
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         Log.d("ad", "create")
         inflater.inflate(R.menu.menu_toolbar, menu)
+
         super.onCreateOptionsMenu(menu, inflater)
     }
 
@@ -153,6 +157,44 @@ class AdvertisementsFragment : Fragment() {
             }
         }
         return super.onOptionsItemSelected(item)
+    }
+    private fun initFilterBox() {
+        // Create an ArrayAdapter
+        val adapter1 = ArrayAdapter.createFromResource(requireContext(),
+            R.array.city_list, android.R.layout.simple_spinner_item)
+        // Specify the layout to use when the list of choices appears
+        adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+
+
+        val adapter2 = ArrayAdapter.createFromResource(requireContext(),
+            R.array.category_list, android.R.layout.simple_spinner_item)
+        // Specify the layout to use when the list of choices appears
+        adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        // Apply the adapter to the spinner
+
+
+        val adapter3 = ArrayAdapter.createFromResource(requireContext(),
+            R.array.sort_kind_list, android.R.layout.simple_spinner_item)
+        // Specify the layout to use when the list of choices appears
+        adapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+
+        val spinner: Spinner = activity?.findViewById(R.id.spinner)!!
+        val spinner2: Spinner = activity?.findViewById(R.id.spinner2)!!
+        val spinner3: Spinner = activity?.findViewById(R.id.spinner3)!!
+
+        spinner.adapter = adapter1
+        spinner2.adapter = adapter2
+        spinner3.adapter = adapter3
+    }
+    private fun getFilterBoxValues(): List<String> {
+        val spinner: Spinner = activity?.findViewById(R.id.spinner)!!
+        val spinner2: Spinner = activity?.findViewById(R.id.spinner2)!!
+        Log.d("filter", spinner.selectedItem.toString())
+        Log.d("filter", spinner2.selectedItem.toString())
+        return listOf<String>(
+            spinner.selectedItem.toString(),
+            spinner2.selectedItem.toString()
+        )
     }
 }
 
