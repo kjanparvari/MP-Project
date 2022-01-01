@@ -1,5 +1,12 @@
 package com.example.mp_project
 
+import android.content.Context
+import android.view.*
+import android.view.inputmethod.InputMethodManager
+import android.widget.LinearLayout
+import com.google.android.material.card.MaterialCardView
+import android.widget.EditText
+
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import android.util.Log
@@ -109,7 +116,44 @@ class AdvertisementsFragment : Fragment() {
             }
         })
     }
+    override fun onCreate(savedInstanceState: Bundle?) {
+        setHasOptionsMenu(true)
+        super.onCreate(savedInstanceState)
+    }
 
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        Log.d("ad", "create")
+        inflater.inflate(R.menu.menu_toolbar, menu)
+        super.onCreateOptionsMenu(menu, inflater)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (item.itemId == R.id.filter_toggle_btn) {
+            val filterBox = activity?.findViewById<MaterialCardView>(R.id.filter_box)!!
+            if (filterBox.visibility == View.GONE) {
+                filterBox.visibility = View.VISIBLE
+            } else if (filterBox.visibility == View.VISIBLE) {
+                filterBox.visibility = View.GONE
+            }
+        } else if (item.itemId == R.id.search_toggle_btn) {
+            val searchBar =  activity?.findViewById<LinearLayout>(R.id.advertisements_search_bar)!!
+            val editText = activity?.findViewById(R.id.advertisements_search_edit) as EditText
+
+            if (searchBar.visibility == View.GONE) {
+                searchBar.visibility = View.VISIBLE
+                editText.requestFocus()
+                val imm =
+                    requireActivity().getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+                imm.showSoftInput(editText, InputMethodManager.SHOW_IMPLICIT)
+            } else if (searchBar.visibility == View.VISIBLE) {
+                searchBar.visibility = View.GONE
+                val imm =
+                    requireActivity().getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+                imm.hideSoftInputFromWindow(view?.windowToken, 0)
+            }
+        }
+        return super.onOptionsItemSelected(item)
+    }
 }
 
 

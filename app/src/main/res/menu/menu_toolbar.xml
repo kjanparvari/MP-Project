@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar_menu"
+    >
+    <item
+        android:id="@+id/search_toggle_btn"
+        android:icon="@drawable/ic_baseline_search_24"
+        app:showAsAction="ifRoom"
+        android:title="Search"
+        />
+    <item
+        android:id="@+id/filter_toggle_btn"
+        android:icon="@drawable/ic_baseline_filter_list_24"
+        app:showAsAction="ifRoom"
+        android:title="Filter"
+        />
     <item
         android:id="@+id/destination_settings"
         android:icon="@drawable/ic_baseline_settings_24"
