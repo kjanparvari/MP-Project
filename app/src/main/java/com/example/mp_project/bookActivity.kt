@@ -63,6 +63,9 @@ class BookActivity : AppCompatActivity() {
                 texttit.text = responseBody.title
                 textpublisher.text = "ناشر : ${responseBody.publisher}"
 
+//                setContentView(R.layout.activity_book)
+
+
 
             }
 

@@ -52,11 +52,12 @@ class AdvertisementListItemAdapter(
         Picasso.get().load(BASE_URL + item.imageUrl).into(holder.imageView)
 
 //        holder.imageView.setImageResource(item.imageId)
-//        val intentAd = Intent(context, AdvertismentActivity::class.java)
-//        intentAd.putExtra("ad", item)
-//        holder.container.setOnClickListener {
-//            context.startActivity(intentAd)
-//        }
+
+        val intentAd = Intent(context, AdvertismentActivity::class.java)
+        intentAd.putExtra("ad", item._id)
+        holder.container.setOnClickListener {
+            context.startActivity(intentAd)
+        }
     }
 
     override fun getItemCount(): Int {
