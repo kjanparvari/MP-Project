@@ -1,4 +1,4 @@
-# MP-Project  
+# Book Exchange 
 
 A book exchange mobile application developed using Kotlin. This project was created as part of the **Mobile Programming** course to facilitate book sharing and trading among users.  
 
