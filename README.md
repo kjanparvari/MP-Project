@@ -22,4 +22,4 @@ This project demonstrates the application of mobile programming concepts, includ
 This project was completed as part of the **Mobile Programming Course**.  
 
 ## License  
-This project is licensed under the AUT License. 
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.  
